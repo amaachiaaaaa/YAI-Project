@@ -2,14 +2,130 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Biogas Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <header >
-
-        <h1 >
-
+    <header class="bg-[radial-gradient(circle,_#3D4AF6_100%,_#303099_100%)] p-4 text-white sticky top-0 z-50 shadow-lg">
+        <div class="flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                <a href="#" class="nav-link" onclick="setActiveLink('home')">
+                    <img src="./images/logo.png" alt="Logo"
+                        class="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+                </a>
+            </div>
+            <div class="lg:hidden">
+                <button onclick="toggleMenu()" class="text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="hidden lg:flex space-x-6 items-center">
+                <a href="#home" class="nav-link text-gray-300 hover:text-gray-400 transition duration-300"
+                    onclick="setActiveLink('home')">Home</a>
+                <a href="#who-we-are" class="nav-link text-gray-300 hover:text-gray-400 transition duration-300"
+                    onclick="setActiveLink('who-we-are')">Who We Are</a>
+                <a href="#what-we-do" class="nav-link text-gray-300 hover:text-gray-400 transition duration-300"
+                    onclick="setActiveLink('what-we-do')">What We Do</a>
+                <a href="#our-team" class="nav-link text-gray-300 hover:text-gray-400 transition duration-300"
+                    onclick="setActiveLink('our-team')">Our Team</a>
+                <button
+                    class="px-6 py-2 border-2 border-white text-white rounded-full bg-transparent hover:bg-blue-600 transition duration-300 hover:text-white focus:outline-none">
+                    Contact Us
+                </button>
+            </nav>
+        </div>
     </header>
+
+    <div id="mobileMenu" class="lg:hidden hidden bg-blue-600 text-white p-4">
+        <a href="#home" class="block py-2 nav-link text-gray-300 hover:text-gray-400 transition duration-300"
+            onclick="setActiveLink('home')">Home</a>
+        <a href="#who-we-are" class="block py-2 nav-link text-gray-300 hover:text-gray-400 transition duration-300"
+            onclick="setActiveLink('who-we-are')">Who We Are</a>
+        <a href="#what-we-do" class="block py-2 nav-link text-gray-300 hover:text-gray-400 transition duration-300"
+            onclick="setActiveLink('what-we-do')">What We Do</a>
+        <a href="#our-team" class="block py-2 nav-link text-gray-300 hover:text-gray-400 transition duration-300"
+            onclick="setActiveLink('our-team')">Our Team</a>
+        <button
+            class="px-4 py-2 sm:px-6 sm:py-3 border-2 border-white text-white rounded-full bg-transparent hover:bg-blue-600 transition duration-300 hover:text-white focus:outline-none mx-auto block">
+            Contact Us
+        </button>
+    </div>
+
+    
+    <section
+    class="relative mt-[-10px] lg:mt-[-70px] bg-cover bg-center bg-[radial-gradient(circle,_#3D4AF6_100%,_#303099_100%)] h-screen flex flex-col justify-center text-center px-4 py-8"> 
+
+    <div class="relative z-0 flex justify-center sm:justify-end mt-[-10px] lg:mt-[-60px] absolute inset-0">
+
+        <img src="./images/frame.png" alt="Frame" class="max-w-xs sm:max-w-xs md:max-w-sm lg:max-w-md object-cover">
+    </div>
+
+    <p
+        class="font-light text-white text-lg sm:text-xl md:text-2xl lg:text-3xl text-center sm:text-left lg:text-left py-12 px-8 sm:px-12 md:px-16 rounded-lg bg-gradient-to-b from-blue-500 to-indigo-800 w-auto max-w-4xl sm:max-w-3xl md:max-w-2xl lg:max-w-xl mx-auto whitespace-normal lg:absolute lg:left-10 lg:top-1/2 lg:transform lg:-translate-y-1/2">
+        Empowering Africa’s technological <br />future with cutting-edge, sustainable solutions.
+    </p>
+
+    <br />
+
+
+
+    <div class="flex justify-center sm:justify-start gap-6 ml-0 sm:ml-20">
+        <button
+            class="text-white py-3 px-6 rounded-full border-2 border-white shadow-lg hover:bg-blue-600 hover:text-white transition duration-300">
+            Learn More
+        </button>
+        <button
+            class="text-white py-3 px-6 rounded-full border-2 border-white shadow-lg hover:bg-blue-600 hover:text-white transition duration-300">
+            Our Solutions
+        </button>
+    </div>
+
+
+
+
+</section>
+
+    <section class="bg-gradient-to-b from-white via-white to-gray-300 py-20 px-4 flex-grow">
+        <div class="flex flex-col sm:flex-row items-center sm:items-start">
+
+            <div class="sm:w-1/2 mb-8 sm:mb-0">
+                <img src="./images/Frame263.png" alt="Frame"
+                    class="max-w-xs sm:max-w-sm lg:max-w-md object-cover mx-auto sm:mx-0">
+            </div>
+
+
+            <div class="sm:w-1/2 text-center sm:text-left px-6">
+                <div class="flex flex-wrap items-center justify-center text-center">
+                    <h2 class="text-xl sm:text-3xl font-bold text-[#3741C5] mb-1 mr-2">Renewable. Sustainable. Clean Energy.</h2>
+                    <span class="text-xl sm:text-3xl font-bold text-black mb-1">Waste to Power Solution.</span>
+                </div>
+
+                <br /><br />
+                <p class="text-lg sm:text-xl text-gray-600 mb-8">
+                    At EcoGas, we transform organic waste into clean, renewable biogas to power homes and businesses. Our innovative process reduces waste, lowers energy costs, and promotes a greener environment. <br /><br />
+                    We provide biogas system installations, maintenance, and expert guidance to help you switch to a sustainable energy source. Join us in creating a cleaner, waste-free future!
+                </p>
+                <br /><br /> <br />
+                <a href="#services"
+                    class="text-blue-600 py-3 px-6 rounded-[10px] border-2 border-blue-600 shadow-lg hover:bg-blue-600 hover:text-white transition duration-300"
+                    onclick="setActiveLink('services')">Our Solution</a>
+            </div>
+        </div>
+    </section>
 </body>
+
+<footer class="bg-[radial-gradient(circle,_#3D4AF6_100%,_#303099_100%)] text-white py-6 mt-auto">
+    <div class="text-center">
+        <p>&copy; 2025 Biogas Generator. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="JS/scripts.js"></script>
 </html>
